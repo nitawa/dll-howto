@@ -27,7 +27,7 @@ jobs:
       - name: Test
         run: |
           cd ${{github.workspace}}/bin
-          call test.exe
+          test.exe
           
 
 
