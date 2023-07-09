@@ -1,5 +1,5 @@
 
-The aim of this mini-project is to show you how to generate and call a dynamic library (DLL) under Windows.
+The aim of this mini-project is to show how to generate and call a dynamic library (DLL) under Windows.
 
 There are two approaches used to export symbols to a DLL:
 the first approach, which we'll call declspec, is based on the__declspec function.
