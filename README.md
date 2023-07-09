@@ -1,4 +1,5 @@
 
+
 The aim of this project is to show how to generate and call a dynamic library (DLL) under Windows.
 
 There are two approaches used to export C++ symbols to a DLL:
