@@ -1,7 +1,7 @@
 
-The aim of this mini-project is to show how to generate and call a dynamic library (DLL) under Windows.
+The aim of this project is to show how to generate and call a dynamic library (DLL) under Windows.
 
-There are two approaches used to export symbols to a DLL:
+There are two approaches used to export C++ symbols to a DLL:
 the first approach, which we'll call declspec, is based on the__declspec function.
 
 -  ``__declspec(dllexport)``: exports symbols to a DLL
@@ -22,7 +22,7 @@ We implement a header file (``A.hpp``) in which we simply switch from export to 
 
   In this example, all symbols are automatically exported.
 
-- **E**: contains the main program in which we call the various libraries.
+- **test.cpp**: the main program in which we call the different libraries (A, B and C).
 
 
 Compiling
@@ -34,10 +34,11 @@ This example can be built with ``cmake`` and ``msbuild``
 call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat" x64
 mkdir build
 cd build
-cmake -DCMAKE_GENERATOR:STRING="Visual Studio 15 2017 Win64" -DCMAKE_INSTALL_PREFIX:PATH=d\workspace\dll-tester\bin ..
+cmake -DCMAKE_GENERATOR:STRING="Visual Studio 15 2017 Win64" -DCMAKE_INSTALL_PREFIX:PATH=d\workspace\dll-howto\bin ..
 msbuild /p:Configuration=Release /p:Platform=x64 ALL_BUILD.vcxproj
 msbuild /p:Configuration=Release /p:Platform=x64 INSTALL.vcxproj
 
+```
 
 Running
 =======
@@ -47,3 +48,4 @@ This example can be run by typing in a cmd terminal:
   cd bin
   call test.exe
 ```
+
