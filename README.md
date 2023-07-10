@@ -14,6 +14,7 @@ In this small repository:
 
 - **A**: we use the ``__declspec`` approach to first export symbols to a DLL (``A.dll``), and then import these symbols into a main program ``test.cpp``.
 We implement a header file (``A.hpp``) in which we simply switch from export to import with a ``-DA_EXPORTS`` key, which we pass to CMake when we compile.
+Note that anyhow Cmake/Visual will define this flag (see [DLL MSVC](https://learn.microsoft.com/fr-fr/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp?view=msvc-170 )).
 
 - **B**: Here, we use the DEF approach and omit the use of ``__declspec``. We implement a definition file (``B.def``) in which we put the symbols associated with the functions we want to export/import to the DLL. 
 
