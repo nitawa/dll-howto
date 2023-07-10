@@ -17,7 +17,7 @@ We implement a header file (``A.hpp``) in which we simply switch from export to 
 
 - **B**: Here, we use the DEF approach and omit the use of ``__declspec``. We implement a definition file (``B.def``) in which we put the symbols associated with the functions we want to export/import to the DLL. 
 
-  Note that writing this file can be a bit tricky, as the symbols are extracted from the ``dumpbin`` command applied to the ``B.obj`` object file.
+  Note that writing this file can be a bit tricky, as the symbols are extracted from the ``dumpbin`` command applied to the ``B.lib`` file.
 
 - **C**: CMake provides the macro ``CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS`` which, if set to ON, automatically generates the associated DEF file.
 
