@@ -8,6 +8,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 add_library(A SHARED A.cpp)
 
 # Set the appropriate compiler flags for exporting symbols on Windows
+# Note that the following command is not mandatory, since visual/cmake will define this
+# preprocessor flag....
 if(WIN32)
     target_compile_definitions(A PRIVATE -DA_EXPORTS)
 endif(WIN32)
