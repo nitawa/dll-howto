@@ -1,7 +1,7 @@
 LIBRARY B
 EXPORTS
     ; these symbols are extracted from the B.obj file with following command line
-    ;    dumpbin /SYMBOLS B.obj
+    ;    dumpbin B.lib
     ??0B@@QEAA@PEBD@Z
     ?print@B@@QEBAXXZ
 
