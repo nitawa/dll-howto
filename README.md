@@ -1,14 +1,14 @@
 
 
-The aim of this project is to show how to generate and call a dynamic library (DLL) under Windows.
+The aim of this project is to illustrate how to generate and call a dynamic library (DLL) in Windows.
 
 There are two approaches used to export C++ symbols to a DLL:
-the first approach, which we'll call declspec, is based upon the__declspec function.
+the first approach, which we'll call declspec, is based upon the__declspec keyword.
 
 -  ``__declspec(dllexport)``: exports symbols to a DLL
 -  ``__declspec(dllimport)``: imports symbols from a DLL.
 
-The second approach, which we will call the DEF approach, consists of writing a symbol definition file to be exported to a DLL. 
+The second approach, which we will call the DEF approach, consists in writing a symbol definition file to be exported to a DLL. 
 
 In this small repository:
 
